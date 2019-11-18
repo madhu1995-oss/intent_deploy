@@ -30,7 +30,7 @@ def predictions(text):
   
   
   return pred
-  def get_final_output(pred, classes):
+ def get_final_output(pred, classes):
   predictions = pred[0]
  
   classes = np.array(classes)

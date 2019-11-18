@@ -5,8 +5,8 @@ from nltk.tokenize import word_tokenize
 from nltk.stem.lancaster import LancasterStemmer
 import nltk
 import re
-from sklearn.preprocessing import OneHotEncoder
-import matplotlib.pyplot as plt
+#from sklearn.preprocessing import OneHotEncoder
+#import matplotlib.pyplot as plt
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 from keras.utils import to_categorical

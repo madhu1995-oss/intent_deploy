@@ -5,7 +5,6 @@ COPY . /var/www
 WORKDIR /var/www
 
 RUN pip3 install keras
-COPY model.h5
 RUN from keras.models load_model
 RUN model=load_model("model.h5")
 ENTRYPOINT [ "-p", "8080"]

@@ -7,5 +7,6 @@ WORKDIR /var/www
 RUN pip3 install keras
 RUN pip3 install pandas
 RUN pip3 install nltk
+RUN pip3 install sklearn
 RUN python3 main.py
 ENTRYPOINT [ "-p", "8080"]

@@ -11,7 +11,7 @@ from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 from keras.utils import to_categorical
 from keras.models import Sequential, load_model
-model =load("model.h5")
+model =load_model("model.h5")
 def predictions(text):
   clean = re.sub(r'[^ a-z A-Z 0-9]', " ", text)
   test_word = word_tokenize(clean)

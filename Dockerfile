@@ -1,11 +1,8 @@
-FROM tensorflow/tensorflow:1.15.0-py3
-ENV BOT_ENV=production
+FROM golang:1.8-alpine
+ADD . /go/src/hello-app
+RUN go install hello-app
 
-COPY . /var/www
-WORKDIR /var/www
-
-RUN pip3 install keras
-RUN pip3 install pandas
-RUN pip3 install nltk
-RUN python3 main.py
-ENTRYPOINT [ "-p", "8080"]
+FROM alpine:latest
+COPY --from=0 /go/bin/hello-app .
+ENV PORT 8080
+CMD ["./intent_deploy"]

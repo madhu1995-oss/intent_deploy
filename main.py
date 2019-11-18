@@ -30,14 +30,13 @@ def predictions(text):
   
   
   return pred
- def get_final_output(pred, classes):
+def get_final_output(pred, classes):
   predictions = pred[0]
  
   classes = np.array(classes)
   ids = np.argsort(-predictions)
   classes = classes[ids]
   predictions = -np.sort(-predictions)
- 
   for i in range(pred.shape[1]):
     print("%s has confidence = %s" % (classes[i], (predictions[i])))
 text = str(input())

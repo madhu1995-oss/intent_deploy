@@ -5,5 +5,7 @@ COPY . /var/www
 WORKDIR /var/www
 
 RUN pip3 install keras
+RUN pip3 install pandas
+RUN pip3 install nltk
 RUN python3 main.py
 ENTRYPOINT [ "-p", "8080"]

@@ -39,6 +39,6 @@ def get_final_output(pred, classes):
   predictions = -np.sort(-predictions)
   for i in range(pred.shape[1]):
     print("%s has confidence = %s" % (classes[i], (predictions[i])))
-text = str(input())
+text = input()
 pred = predictions(text)
 get_final_output(pred, unique_intent)
